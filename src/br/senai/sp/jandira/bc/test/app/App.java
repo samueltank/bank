@@ -7,41 +7,56 @@ public class App
     public static void main(String[] args)
     {
         // criação conta da Maria
-        Conta contaMaria = new Conta(); // criação de objeto pela palavra-chave 'new';
+        Conta contaMaria = new Conta("1254-8"); // criação de objeto pela palavra-chave 'new';
 
         contaMaria.titular = "Maria Antonieta"; // o ponto simboliza uma seta que aponta para os atributos do objeto;
-        contaMaria.numero = "7845-8"; // o atributo número da conta Maria recebe o valor descrito;
         contaMaria.numeroAgencia = "5465-8";
-        contaMaria.saldo = 500.0;
         contaMaria.tipo = "Corrente";
+        contaMaria.depositar(500);
 
-        System.out.println(contaMaria.titular);
+
+//        System.out.println(contaMaria.titular);
 
 
-        Conta teste = contaMaria;  // teste recebe o endereço de memória do objeto contaMaria;
-        System.out.println(teste); // retorna a referência da memória RAM (em hexadecimal);
-        System.out.println(teste.saldo);
+//        Conta teste = contaMaria;  // teste recebe o endereço de memória do objeto contaMaria;
+//        System.out.println(teste); // retorna a referência da memória RAM (em hexadecimal);
+//        System.out.println(teste.saldo);
 
         // criação conta do Pedro;
-        Conta contaPedro = new Conta();
+        Conta contaPedro = new Conta("2541-9");
         contaPedro.titular = "Pedro Cabral";
-        contaPedro.numero = "6547-6";
-        contaPedro.saldo = 200.0;
         contaPedro.tipo = "Poupança";
         contaPedro.numeroAgencia = "4214-9";
+        contaPedro.depositar(500);
 
         // criação conta da Ana;
-        Conta contaAna = new Conta();
+        Conta contaAna = new Conta("2541-6");
         contaAna.titular = "Ana Caroline";
-        contaAna.numero = "6610-6";
-        contaAna.saldo = 600.0;
         contaAna.tipo = "Poupança";
         contaAna.numeroAgencia = "4884-9";
+        contaAna.depositar(600);
 
         // exibir os detalhes da conta:
-        contaMaria.exibirDetalhes();
-        contaPedro.exibirDetalhes();
-        contaAna.exibirDetalhes();
+//        contaMaria.exibirDetalhes();
+//        contaPedro.exibirDetalhes();
+//        contaAna.exibirDetalhes();
 
+        // depositar 100 reais na conta da Maria:
+//        contaMaria.depositar(100);
+//        contaMaria.exibirDetalhes();
+
+        // sacar 100 reais da conta da Ana:
+//        contaAna.sacar(50);
+//        contaAna.exibirDetalhes();
+
+        // depositar na conta do Pedro:
+//        contaPedro.depositar(500);
+//        contaPedro.exibirDetalhes();
+
+        // sacar -100 da conta da Maria:
+//        contaMaria.sacar(500);
+
+        // trasferir 100 reais da conta do Pedro para a conta da Maria:
+        contaPedro.trasferir(contaMaria, 150);
     }
 }
