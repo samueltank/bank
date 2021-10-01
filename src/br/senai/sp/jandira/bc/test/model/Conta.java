@@ -1,10 +1,12 @@
 package br.senai.sp.jandira.bc.test.model;
 
+import br.senai.sp.jandira.bc.test.list.TipoConta;
+
 public class Conta
 {
     // atributos da classe:
 
-    private String tipo;
+    private TipoConta tipo; // como boa prática todos os atributos devem ser privados;
     private String numero;
     private String numeroAgencia;
     private String titular;
@@ -22,7 +24,7 @@ public class Conta
 
     // atribuição:
 
-    public void setTipo(String tipo)
+    public void setTipo(TipoConta tipo)
     {
         this.tipo = tipo;
     }
@@ -39,7 +41,7 @@ public class Conta
 
     // acesso:
 
-    public String getTipo()
+    public Enum<TipoConta> getTipo()
     {
         return tipo;
     }
@@ -79,6 +81,22 @@ public class Conta
         }
     }
 
+    public boolean depositar(int valorDeposito)
+    {
+        if (valorDeposito > 0)
+        {
+            saldo += valorDeposito;
+            System.out.println("Valor depositado!");
+            return true;
+        }
+        else
+        {
+            System.out.println("Valor não depositado!");
+            return false;
+        }
+    }
+
+
     public boolean sacar(double valorSaque)
     {
         if (valorSaque > 0 && valorSaque <= saldo)
@@ -115,10 +133,10 @@ public class Conta
     {
         System.out.println();
         System.out.println("------------------------------------");
-        System.out.printf("Titular: %s\n",titular);
-        System.out.printf("Número: %s\n" , numero);
-        System.out.printf("Agência: %s\n",numeroAgencia);
-        System.out.printf("Tipo de Conta: %s\n",tipo);
-        System.out.printf("Saldo: %s\n",saldo);
+        System.out.printf("Titular: %s\n", getTitular());
+        System.out.printf("Número: %s\n" , getNumero());
+        System.out.printf("Agência: %s\n", getNumeroAgencia());
+        System.out.printf("Tipo de Conta: %s\n", getTipo());
+        System.out.printf("Saldo: %s\n", getSaldo());
     }
 }

@@ -1,6 +1,9 @@
 package br.senai.sp.jandira.bc.test.app;
 
+import br.senai.sp.jandira.bc.test.list.TipoConta;
 import br.senai.sp.jandira.bc.test.model.Conta;
+
+import java.awt.*;
 
 public class App
 {
@@ -8,14 +11,12 @@ public class App
     {
         // criação conta da Maria
         Conta contaMaria = new Conta("1254-8"); // criação de objeto pela palavra-chave 'new';
-
         contaMaria.setTitular("Maria Antonieta"); // o ponto simboliza uma seta que aponta para os atributos do objeto;
         contaMaria.setNumeroAgencia("5465-8");
-        contaMaria.setTipo("Corrente");
-        contaMaria.depositar(500);
+        contaMaria.setTipo(TipoConta.SALARIO);
+        contaMaria.depositar(5000);
 
-
-//        System.out.println(contaMaria.titular);
+        System.out.println(contaMaria.getTipo());
 
 
 //        Conta teste = contaMaria;  // teste recebe o endereço de memória do objeto contaMaria;
@@ -25,14 +26,14 @@ public class App
         // criação conta do Pedro;
         Conta contaPedro = new Conta("2541-9");
         contaPedro.setTitular("Pedro Cabral");
-        contaPedro.setTipo("Poupança");
+        contaPedro.setTipo(TipoConta.POUPANCA);
         contaPedro.setNumeroAgencia("4214-9");
         contaPedro.depositar(500);
 
         // criação conta da Ana;
         Conta contaAna = new Conta("2541-6");
         contaAna.setTitular("Ana Caroline");
-        contaAna.setTipo("Poupança");
+        contaAna.setTipo(TipoConta.SALARIO);
         contaAna.setNumeroAgencia("4884-9");
         contaAna.depositar(600);
 
@@ -57,6 +58,10 @@ public class App
 //        contaMaria.sacar(500);
 
         // trasferir 100 reais da conta do Pedro para a conta da Maria:
-        contaPedro.trasferir(contaMaria, 150);
+        //contaPedro.trasferir(contaMaria, 150);
+
+        contaMaria.exibirDetalhes();
+        contaPedro.exibirDetalhes();
+        contaAna.exibirDetalhes();
     }
 }
