@@ -10,11 +10,27 @@ public class Conta
     private String titular;
     private double saldo;
 
-    // construtores:
+    // construtor da classe (é iniciado quando o objeto for criado):
 
     public Conta(String numero)
     {
         this.numero = numero;
+    }
+
+    public void setTipo(String tipo)
+    {
+        this.tipo = tipo;
+    }
+
+    // métodos de acesso e atribuição:
+    public void setNumeroAgencia(String numeroAgencia)
+    {
+        this.numeroAgencia = numeroAgencia;
+    }
+
+    public  void setTitular(String titular)
+    {
+        this.titular = titular;
     }
 
     public boolean depositar(double valorDeposito)
@@ -62,21 +78,6 @@ public class Conta
         {
             System.out.println("Não foi possível realizar a transferência!");
         }
-    }
-
-    public void setTipo(String tipo)
-    {
-        this.tipo = tipo;
-    }
-
-    public void setNumeroAgencia(String numeroAgencia)
-    {
-        this.numeroAgencia = numeroAgencia;
-    }
-
-    public  void setTitular(String titular)
-    {
-        this.titular = titular;
     }
 
     public void exibirDetalhes()
