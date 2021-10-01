@@ -4,10 +4,10 @@ public class Conta
 {
     // atributos da classe:
 
-    public String tipo;
+    private String tipo;
     private String numero;
-    public String numeroAgencia;
-    public String titular;
+    private String numeroAgencia;
+    private String titular;
     private double saldo;
 
     // construtores:
@@ -64,6 +64,20 @@ public class Conta
         }
     }
 
+    public void setTipo(String tipo)
+    {
+        this.tipo = tipo;
+    }
+
+    public void setNumeroAgencia(String numeroAgencia)
+    {
+        this.numeroAgencia = numeroAgencia;
+    }
+
+    public  void setTitular(String titular)
+    {
+        this.titular = titular;
+    }
 
     public void exibirDetalhes()
     {

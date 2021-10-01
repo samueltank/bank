@@ -9,9 +9,9 @@ public class App
         // criação conta da Maria
         Conta contaMaria = new Conta("1254-8"); // criação de objeto pela palavra-chave 'new';
 
-        contaMaria.titular = "Maria Antonieta"; // o ponto simboliza uma seta que aponta para os atributos do objeto;
-        contaMaria.numeroAgencia = "5465-8";
-        contaMaria.tipo = "Corrente";
+        contaMaria.setTitular("Maria Antonieta"); // o ponto simboliza uma seta que aponta para os atributos do objeto;
+        contaMaria.setNumeroAgencia("5465-8");
+        contaMaria.setTipo("Corrente");
         contaMaria.depositar(500);
 
 
@@ -24,16 +24,16 @@ public class App
 
         // criação conta do Pedro;
         Conta contaPedro = new Conta("2541-9");
-        contaPedro.titular = "Pedro Cabral";
-        contaPedro.tipo = "Poupança";
-        contaPedro.numeroAgencia = "4214-9";
+        contaPedro.setTitular("Pedro Cabral");
+        contaPedro.setTipo("Poupança");
+        contaPedro.setNumeroAgencia("4214-9");
         contaPedro.depositar(500);
 
         // criação conta da Ana;
         Conta contaAna = new Conta("2541-6");
-        contaAna.titular = "Ana Caroline";
-        contaAna.tipo = "Poupança";
-        contaAna.numeroAgencia = "4884-9";
+        contaAna.setTitular("Ana Caroline");
+        contaAna.setTipo("Poupança");
+        contaAna.setNumeroAgencia("4884-9");
         contaAna.depositar(600);
 
         // exibir os detalhes da conta:
