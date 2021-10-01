@@ -17,12 +17,16 @@ public class Conta
         this.numero = numero;
     }
 
+
+    // métodos de acesso e atribuição:
+
+    // atribuição:
+
     public void setTipo(String tipo)
     {
         this.tipo = tipo;
     }
 
-    // métodos de acesso e atribuição:
     public void setNumeroAgencia(String numeroAgencia)
     {
         this.numeroAgencia = numeroAgencia;
@@ -31,6 +35,33 @@ public class Conta
     public  void setTitular(String titular)
     {
         this.titular = titular;
+    }
+
+    // acesso:
+
+    public String getTipo()
+    {
+        return tipo;
+    }
+
+    public String getNumeroAgencia()
+    {
+        return numeroAgencia;
+    }
+
+    public String getNumero()
+    {
+        return numero;
+    }
+
+    public String getTitular()
+    {
+        return titular;
+    }
+
+    public double getSaldo()
+    {
+        return saldo;
     }
 
     public boolean depositar(double valorDeposito)
