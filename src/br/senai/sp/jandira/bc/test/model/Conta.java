@@ -8,8 +8,8 @@ public class Conta
 
     private TipoConta tipo; // como boa prática todos os atributos devem ser privados;
     private String numero;
-    private String numeroAgencia;
-    private String titular;
+    private String Agencia;
+    private Cliente titular;
     private double saldo;
 
     // construtor da classe (é iniciado quando o objeto for criado):
@@ -19,51 +19,50 @@ public class Conta
         this.numero = numero;
     }
 
-
     // métodos de acesso e atribuição:
 
-    // atribuição:
+    // atribuidores(setters):
 
     public void setTipo(TipoConta tipo)
     {
         this.tipo = tipo;
     }
 
-    public void setNumeroAgencia(String numeroAgencia)
+    public void setAgencia(String agencia)
     {
-        this.numeroAgencia = numeroAgencia;
+        this.Agencia = agencia;
     }
 
-    public  void setTitular(String titular)
+    public  void setTitular(Cliente titular)
     {
         this.titular = titular;
     }
 
-    // acesso:
+    // acessores(getters):
 
     public Enum<TipoConta> getTipo()
     {
-        return tipo;
+        return this.tipo;
     }
 
-    public String getNumeroAgencia()
+    public String getAgencia()
     {
-        return numeroAgencia;
+        return this.Agencia;
     }
 
     public String getNumero()
     {
-        return numero;
+        return this.numero;
     }
 
-    public String getTitular()
+    public Cliente getTitular()
     {
-        return titular;
+        return this.titular;
     }
 
     public double getSaldo()
     {
-        return saldo;
+        return this.saldo;
     }
 
     public boolean depositar(double valorDeposito)
@@ -133,10 +132,11 @@ public class Conta
     {
         System.out.println();
         System.out.println("------------------------------------");
-        System.out.printf("Titular: %s\n", getTitular());
+        System.out.printf("Titular: %s\n", titular.getName());
+        System.out.printf("E-mail: %s\n", titular.getEmail());
         System.out.printf("Número: %s\n" , getNumero());
-        System.out.printf("Agência: %s\n", getNumeroAgencia());
+        System.out.printf("Agência: %s\n", getAgencia());
         System.out.printf("Tipo de Conta: %s\n", getTipo());
-        System.out.printf("Saldo: %s\n", getSaldo());
+        System.out.println("Saldo: " + saldo);
     }
 }

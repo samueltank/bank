@@ -8,12 +8,12 @@ public class Cliente // class que descreve o cliente;
 
     public void setName(String name)
     {
-        this.name = name;
+        this.name = name; // sempre acrescentar o this.(atributeName) como boa prática;
     }
 
     public String getName()
     {
-        return name;
+        return this.name;
     }
 
     public void setEmail(String email)
@@ -23,7 +23,7 @@ public class Cliente // class que descreve o cliente;
 
     public String getEmail()
     {
-        return email;
+        return this.email;
     }
 
     public void setSalario(double salario)
@@ -33,6 +33,6 @@ public class Cliente // class que descreve o cliente;
 
     public double getSalario()
     {
-        return salario;
+        return this.salario;
     }
 }
