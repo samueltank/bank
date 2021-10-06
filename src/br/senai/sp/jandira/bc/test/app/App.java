@@ -1,7 +1,9 @@
 package br.senai.sp.jandira.bc.test.app;
 
 import br.senai.sp.jandira.bc.test.list.TipoConta;
+import br.senai.sp.jandira.bc.test.model.Cliente;
 import br.senai.sp.jandira.bc.test.model.Conta;
+import com.sun.security.ntlm.Client;
 
 import java.awt.*;
 
@@ -9,9 +11,17 @@ public class App
 {
     public static void main(String[] args)
     {
+        // criar o cliente Maria
+
+        Cliente clienteMaria = new Cliente();
+        clienteMaria.setName("Maria Antonieta");
+        clienteMaria.setEmail("mariaantonieta@gmail.com");
+        clienteMaria.setSalario(2500.25);
+
+
         // criação conta da Maria
         Conta contaMaria = new Conta("1254-8"); // criação de objeto pela palavra-chave 'new';
-        contaMaria.setTitular("Maria Antonieta"); // o ponto simboliza uma seta que aponta para os atributos do objeto;
+        contaMaria.getTitular(); // o ponto simboliza uma seta que aponta para os atributos do objeto;
         contaMaria.setNumeroAgencia("5465-8");
         contaMaria.setTipo(TipoConta.SALARIO);
         contaMaria.depositar(5000);
@@ -23,16 +33,28 @@ public class App
 //        System.out.println(teste); // retorna a referência da memória RAM (em hexadecimal);
 //        System.out.println(teste.saldo);
 
+        // criação do cliente Prdro;
+        Cliente clientePedro = new Cliente();
+        clientePedro.setName("Pedro Rodolfo");
+        clientePedro.setEmail("pedroro");
+        clientePedro.setSalario(2564.52);
+
         // criação conta do Pedro;
         Conta contaPedro = new Conta("2541-9");
-        contaPedro.setTitular("Pedro Cabral");
+        contaPedro.getTitular();
         contaPedro.setTipo(TipoConta.POUPANCA);
         contaPedro.setNumeroAgencia("4214-9");
         contaPedro.depositar(500);
 
+        // criação do cliente Ana;
+        Cliente clienteAna = new Cliente();
+        clienteAna.setName("Ana Cristina");
+        clienteAna.setEmail("anacristina@gmail.com");
+        clienteAna.setSalario(2564.58);
+
         // criação conta da Ana;
         Conta contaAna = new Conta("2541-6");
-        contaAna.setTitular("Ana Caroline");
+        contaAna.getTitular();
         contaAna.setTipo(TipoConta.SALARIO);
         contaAna.setNumeroAgencia("4884-9");
         contaAna.depositar(600);
