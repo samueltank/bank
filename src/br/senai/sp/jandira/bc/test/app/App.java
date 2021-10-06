@@ -3,9 +3,6 @@ package br.senai.sp.jandira.bc.test.app;
 import br.senai.sp.jandira.bc.test.list.TipoConta;
 import br.senai.sp.jandira.bc.test.model.Cliente;
 import br.senai.sp.jandira.bc.test.model.Conta;
-import com.sun.security.ntlm.Client;
-
-import java.awt.*;
 
 public class App
 {
@@ -21,8 +18,8 @@ public class App
 
         // criação conta da Maria
         Conta contaMaria = new Conta("1254-8"); // criação de objeto pela palavra-chave 'new';
-        contaMaria.getTitular(); // o ponto simboliza uma seta que aponta para os atributos do objeto;
-        contaMaria.setNumeroAgencia("5465-8");
+        contaMaria.setTitular(clienteMaria); // o ponto simboliza uma seta que aponta para os atributos do objeto;
+        contaMaria.setAgencia("5465-8");
         contaMaria.setTipo(TipoConta.SALARIO);
         contaMaria.depositar(5000);
 
@@ -33,17 +30,17 @@ public class App
 //        System.out.println(teste); // retorna a referência da memória RAM (em hexadecimal);
 //        System.out.println(teste.saldo);
 
-        // criação do cliente Prdro;
+        // criação do cliente Pedro;
         Cliente clientePedro = new Cliente();
         clientePedro.setName("Pedro Rodolfo");
-        clientePedro.setEmail("pedroro");
+        clientePedro.setEmail("pedrorodol@gmail.com");
         clientePedro.setSalario(2564.52);
 
         // criação conta do Pedro;
         Conta contaPedro = new Conta("2541-9");
-        contaPedro.getTitular();
+        contaPedro.setTitular(clientePedro);
         contaPedro.setTipo(TipoConta.POUPANCA);
-        contaPedro.setNumeroAgencia("4214-9");
+        contaPedro.setAgencia("4214-9");
         contaPedro.depositar(500);
 
         // criação do cliente Ana;
@@ -54,9 +51,9 @@ public class App
 
         // criação conta da Ana;
         Conta contaAna = new Conta("2541-6");
-        contaAna.getTitular();
+        contaAna.setTitular(clienteAna);
         contaAna.setTipo(TipoConta.SALARIO);
-        contaAna.setNumeroAgencia("4884-9");
+        contaAna.setAgencia("4884-9");
         contaAna.depositar(600);
 
         // exibir os detalhes da conta:
