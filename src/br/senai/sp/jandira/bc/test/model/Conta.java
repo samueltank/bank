@@ -8,7 +8,7 @@ public class Conta
 
     private TipoConta tipo; // como boa prática todos os atributos devem ser privados;
     private String numero;
-    private String Agencia;
+    private Agencias agencia;
     private Cliente titular;
     private double saldo;
 
@@ -28,9 +28,9 @@ public class Conta
         this.tipo = tipo;
     }
 
-    public void setAgencia(String agencia)
+    public void setAgencia(Agencias agencia)
     {
-        this.Agencia = agencia;
+        this.agencia = agencia;
     }
 
     public  void setTitular(Cliente titular)
@@ -45,9 +45,9 @@ public class Conta
         return this.tipo;
     }
 
-    public String getAgencia()
+    public Agencias getAgencia()
     {
-        return this.Agencia;
+        return this.agencia;
     }
 
     public String getNumero()
@@ -135,7 +135,7 @@ public class Conta
         System.out.printf("Titular: %s\n", titular.getName());
         System.out.printf("E-mail: %s\n", titular.getEmail());
         System.out.printf("Número: %s\n" , getNumero());
-        System.out.printf("Agência: %s\n", getAgencia());
+        System.out.printf("Agência: %s\n", agencia.getNumeroAgencia());
         System.out.printf("Tipo de Conta: %s\n", getTipo());
         System.out.println("Saldo: " + saldo);
     }
