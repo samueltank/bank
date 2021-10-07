@@ -8,7 +8,7 @@ public class Conta
 
     private TipoConta tipo; // como boa prática todos os atributos devem ser privados;
     private String numero;
-    private Agencias agencia;
+    private NovaAgencia agencia;
     private Cliente titular;
     private double saldo;
 
@@ -28,7 +28,7 @@ public class Conta
         this.tipo = tipo;
     }
 
-    public void setAgencia(Agencias agencia)
+    public void setAgencia(NovaAgencia agencia)
     {
         this.agencia = agencia;
     }
@@ -45,7 +45,7 @@ public class Conta
         return this.tipo;
     }
 
-    public Agencias getAgencia()
+    public NovaAgencia getAgencia()
     {
         return this.agencia;
     }
